@@ -1,0 +1,57 @@
+{
+  "name": "nativekit-bottom-sheet",
+  "version": "0.0.9-development",
+  "description": "Bottom Sheet Component for React Native",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "react-native": "lib/module/index.js",
+  "types": "lib/typescript/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js,.ts,.tsx .",
+    "typescript": "tsc --noEmit",
+    "release": "release-it",
+    "prepare": "bob build"
+  },
+  "keywords": [
+    "react-native",
+    "bottom-sheet",
+    "modal-bottom",
+    "gesture",
+    "handler"
+  ],
+  "files": [
+    "lib/",
+    "src/",
+    "README.md"
+  ],
+  "author": "heybrunoandrade",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:heybrunoandrade/nativekit-bottom-sheet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/heybrunoandrade/nativekit-bottom-sheet/issues"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-gesture-handler": "*"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn typescript",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  }
+}

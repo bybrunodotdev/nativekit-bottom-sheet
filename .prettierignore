@@ -1,0 +1,13 @@
+**/tests/fixtures/**/*
+**/tests/fixture-project/**/*
+**/dist
+**/coverage
+**/tests/integration/fixtures/**/*
+**/.vscode
+**/.nyc_output
+packages/eslint-plugin-tslint/tests/test-tslint-rules-directory/alwaysFailRule.js
+.github
+
+
+# Ignore CHANGELOG.md files to avoid issues with automated release job
+CHANGELOG.md
